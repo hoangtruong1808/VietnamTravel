@@ -1,0 +1,75 @@
+body
+{
+    background-color: rgb(219, 243, 243)
+}
+.dangnhap
+{
+	border: solid 2px rgb(15, 142, 165);
+	width: 420px;
+	margin:130px auto;
+	background-color: white;
+}
+.dangnhap h1
+{
+	font-size: 25px;
+	text-align: center;
+	font-weight: 850;
+	color: white;
+	font-family: Tahoma;
+	background-color:rgb(15, 142, 165);
+	padding: 10px 0px;
+	margin: 0px;
+}
+.dangnhap div
+{
+	font-size: 17px;
+	padding: 10px 30px 10px 26px;
+	color: rgb(18, 74, 82);
+	font-weight: 500;
+	font-family: Tahoma;
+	margin-top: 10px;
+}
+.dangnhap .text
+{
+	height: 27px;
+	width: 260px;
+	font-size: 17px;
+}
+.dangnhap #button
+{
+	margin: 0px 130px;
+	height: 36px;
+	width: 108px;
+	background-color: #4b8b88;
+	border: solid 2px #4b8b83;
+	font-weight: 500;
+	font-family: Tahoma;
+	color: white;
+	font-size: 16px
+}
+.dangnhap p
+{
+	font-size: 18px;
+	text-align: center;
+	color: rgb(226, 69, 69);
+	font-weight: 500;
+	font-family: Tahoma;
+}
+.dangnhap .dangky
+{
+    text-align: center;
+    padding: 0px;
+    margin-bottom: 20px;
+
+}
+.dangnhap .dangky a
+{
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(18, 74, 82);
+}
+.dangnhap .dangky a:hover
+{
+    color: rgb(245, 130, 88);
+    text-decoration-line: underline;
+}

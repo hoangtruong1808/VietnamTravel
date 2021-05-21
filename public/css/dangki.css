@@ -1,0 +1,75 @@
+body
+{
+    background-color: rgb(219, 243, 243)
+}
+.dangki
+{
+	border: solid 2px rgb(15, 142, 165);
+	width:  660px;
+	margin:30px auto;
+	background-color: white;
+}
+.dangki h1
+{
+	font-size: 25px;
+	text-align: center;
+	font-weight: 850;
+	color: white;
+	font-family: Tahoma;
+	background-color:rgb(15, 142, 165);
+	padding: 10px 0px;
+	margin: 0px;
+}
+.dangki div
+{
+	font-size: 17px;
+	padding: 0px 0px 0px 20px;
+	color: rgb(18, 74, 82);
+	font-weight: 500;
+	font-family: Tahoma;
+	margin-top: 10px;
+}
+.dangki .text
+{
+	height: 27px;
+	width: 560px;
+	font-size: 17px;
+}
+.dangki #button
+{
+	margin: 10px 235px 10px;
+	height: 36px;
+	width: 150px;
+	background-color: #4b8b88;
+	border: solid 2px #4b8b83;
+	font-weight: 500;
+	font-family: Tahoma;
+	color: white;
+	font-size: 16px
+}
+.dangki p
+{
+	font-size: 18px;
+	text-align: center;
+	color: rgb(226, 69, 69);
+	font-weight: 500;
+	font-family: Tahoma;
+}
+.dangki .dangky
+{
+    text-align: center;
+    padding: 0px;
+    margin-bottom: 20px;
+
+}
+.dangki .dangky a
+{
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(18, 74, 82);
+}
+.dangki .dangky a:hover
+{
+    color: rgb(245, 130, 88);
+    text-decoration-line: underline;
+}

@@ -1,0 +1,64 @@
+.footer 
+{
+    color: white;
+    background-color: rgb(46, 152, 223);
+    font-size: 15px;
+    padding-top: 10px;
+}
+.footer .footer-tieude
+{
+    font-size: 16px;
+    font-weight: bolder;
+    color:rgb(255, 255, 255)
+}
+
+.footer__gioithieu img
+{
+    width: 200px;
+}
+
+.footer__truycapnhanh
+{
+    text-align: center;
+}
+.footer__truycapnhanh ul
+{
+    padding: 0px;
+    margin: 0px;
+    padding-top: 10px;
+    list-style: none;
+}
+.footer__truycapnhanh ul li 
+{
+    padding: 3px;
+}
+.footer__truycapnhanh ul li a
+{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+.footer__truycapnhanh ul li a:hover
+{
+    color: orangered;
+}
+.footer__lienhe
+{
+    text-align: right;
+}
+.footer__lienhe p, .footer__lienhe p a
+{
+    margin-top: 10px;
+    font-size: 15px;
+    color: white;
+}
+.footer__lienhe span
+{
+    font-size: 25px;
+    padding-left: 15px;
+}
+.footer__copyright
+{
+    text-align: center;
+    margin-top: 10px;
+}

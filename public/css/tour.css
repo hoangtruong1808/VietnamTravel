@@ -1,0 +1,404 @@
+.search
+{
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px rgb(202, 200, 200) solid;
+}
+.search span
+{
+    margin: 0px;
+}
+.search .searchbox
+{
+    width: 33%;
+    height: 40px;
+    border: 1px black solid;
+    font-size: 15px;
+}
+
+.search #button
+{
+    background-color: rgb(46, 157, 201);
+    border: 1px rgb(46, 157, 201) solid;
+    color: white;
+    font-weight: bold;
+}
+.adver 
+{
+    text-align: center;
+    margin: 20px 0px 40px 0px;
+}
+.adver h1
+{
+    font-size: 24px;
+    font-weight: bolder;
+    margin: 10px;
+}
+.adver p
+{
+    font-size: 14px;
+}
+.tours
+{   
+    width: 240px;
+    padding: 0px;
+    margin-bottom: 40px;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 2px 2px 2px rgb(197, 196, 196);
+}
+.tours a:hover
+{
+    color: orangered;
+}
+.tours img
+{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    height: 190px;
+    margin: 0px;
+    margin-bottom: 15px;
+}
+.tours a img:hover
+{
+    opacity: 0.8;
+}
+.tours a
+{
+
+    text-decoration: none;
+    color: black;
+}
+.tours div
+{
+    text-align: center;
+}
+.tours .tentour
+{
+    font-weight: bold;
+    font-size: 15px;
+}
+.tours .giakhuyenmai
+{
+    font-weight: bold;
+    color: rgb(46, 157, 201);
+    font-size: 18px;
+    margin-right: 10px;
+}
+.tours .gia
+{
+    color: rgb(130, 132, 133);
+    font-size: 12px;
+    text-decoration: line-through;
+}
+.tours .button
+{
+    margin-left: 6px;
+    margin-bottom: 6px;
+    font-size: 13px;
+    padding: 6px;
+    margin-bottom: 10px;
+    
+}
+.tours .chitiet
+{
+    background-color: orangered;
+    border: none;
+    color: white;
+}
+.tours .dattour
+{
+    background-color: rgb(46, 157, 201);
+    border: none;
+    color: white;
+}
+.phantrang
+{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.phantrang a
+{
+    background-color: rgb(232, 233, 233);
+    padding: 7px 14px;
+    text-decoration: none;
+    color: rgb(145, 145, 145);
+    font-size: 14px;
+    border: 1px solid rgb(146, 146, 146);
+}
+.phantrang a:hover
+{
+    background-color: rgb(193, 231, 247);
+}
+.chitiettour1
+{
+    margin-top: 30px;
+}
+.chitiettour1 p
+{
+    margin: 10px;
+}
+.chitiettour2 
+{
+    margin: 20px 0px;
+}
+.chitiettour2 table
+{
+    background-color: rgb(250, 225, 210);
+    font-size: 15px;
+}
+.chitiettour2 table tr
+{
+    text-align: center;
+}
+.chitiettour2 table th
+{
+    padding: 5px 30px;
+
+}
+.chitiettour2 table td
+{
+    padding: 6px 10px;
+}
+.chitiettour2 table button
+{
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(252, 113, 63);
+    color: white;
+    font-weight: bolder;
+}
+.chitiettour2 table button:hover
+{
+    background-color: rgb(252, 138, 96);
+}
+.chitiettour3
+{
+    padding-top: 20px;
+    border-top: solid rgb(196, 190, 190) 0.5px;
+}
+.chitiettour3 h2
+{
+    font-size: 20px;
+}
+.chitiettour3 b
+{
+    font-size: 15px;
+    
+}
+.chitiettour3 p
+{
+    font-size: 13px;
+    padding-top: 5px;
+    margin: 0px;
+}
+.chitiettour3 img
+{
+    width: 650px;
+    height: 400px;
+    margin-left: auto;
+	margin-right: auto;
+	display: block;
+    padding: 20px 0px;
+}
+.tourlienquan
+{   margin-bottom: 40px;
+    padding-top: 20px;
+    border-top: solid rgb(196, 190, 190) 0.5px;
+}
+.tourlienquan h2
+{
+    font-size: 21px;
+}
+.tourlienquan .tourlienquan__menu
+{
+    width: 240px;
+    background-color: white;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    box-shadow: 2px 2px 2px rgb(197, 196, 196);
+}
+.tourlienquan .tourlienquan__menu img
+{
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    width: 240px;
+    height: 215px;
+}
+
+.tourlienquan .tourlienquan__menu img:hover
+{
+    opacity: 0.7;
+}
+.tourlienquan .tourlienquan__menu .ten
+{
+    margin: 20px 20px 0px 20px;
+}
+.tourlienquan .tourlienquan__menu .ten a
+{
+    text-decoration: none;
+    color: rgb(112, 112, 112);
+    font-weight: bold;
+    font-size: 17px;
+    
+}
+.tourlienquan .tourlienquan__menu .ten a:hover
+{
+    color:rgb(46, 157, 201);
+}
+.tourlienquan .tourlienquan__menu .gia a:hover
+{
+    color:rgb(46, 157, 201);
+}
+.tourlienquan .tourlienquan__menu .gia
+{
+    text-decoration: none;
+    color: rgb(39, 38, 38);
+    font-weight: bold;
+    font-size: 19px;
+    
+}
+
+.tourlienquan .tourlienquan__menu .gia
+{
+    margin: 10px 20px 0px 20px;
+}
+.khachsan
+{   
+    width: 240px;
+    padding: 0px;
+    margin: 20px 0px;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 2px 2px 2px rgb(197, 196, 196);
+}
+.khachsan a:hover
+{
+    color: orangered;
+}
+.khachsan img
+{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    height: 190px;
+    margin: 0px;
+    margin-bottom: 15px;
+}
+.khachsan a img:hover
+{
+    opacity: 0.8;
+}
+.khachsan a
+{
+
+    text-decoration: none;
+    color: black;
+}
+.khachsan div
+{
+    text-align: center;
+}
+.khachsan .tenkhachsan
+{
+    font-weight: bold;
+    font-size: 15px;
+}
+.khachsan .thanhpho
+{
+    font-size: 14px;
+    margin: 5px 0px;
+
+
+}
+.khachsan .star
+{
+    color:rgb(247, 247, 68);
+}
+.khachsan .gia
+{
+    font-weight: bold;
+    color: rgb(46, 157, 201);
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.khachsan .button
+{
+    margin-left: 6px;
+    margin-bottom: 6px;
+    font-size: 13px;
+    padding: 6px;
+    margin-bottom: 10px;
+    
+}
+
+.khachsan .chitiet
+{
+    background-color: orangered;
+    border: none;
+    color: white;
+}
+.khachsan .datphong
+{
+    background-color: rgb(46, 157, 201);
+    border: none;
+    color: white;
+}
+.chitietkhachsan1 img
+{
+    width: 100%;
+    height: 100%;
+}
+.chitietkhachsan1 h1
+{
+    font-size: 26px;
+    font-weight: bold;
+    color: rgb(105, 103, 103);
+}
+
+.chitietkhachsan2 .giaphong
+{
+    font-size: 20px;
+}
+.chitietkhachsan2 .star
+{
+    color: yellow;
+}
+.chitietkhachsan2
+{
+    margin: 40px 0px 30px 30px;
+}
+.chitietkhachsan2 div
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+}
+.chitietkhachsan2 .chitiet
+{
+    margin: 20px 0px;
+    padding-top: 10px;
+    border-top: 0.5px solid rgb(122, 118, 118);
+}
+.chitietkhachsan2 .chitiet h2
+{
+    font-size: 22px;
+}
+.chitietkhachsan2 .chitiet p
+{
+    margin: 5px 0px;
+    font-size: 14px;
+}
+.chitietkhachsan2 .btn-datkhachsan
+{
+    width: 150px;
+    background-color: rgb(29, 136, 185);
+    color: white;
+    font-weight: bold;
+    border: 5px solid rgb(29, 136, 185);
+}

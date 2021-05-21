@@ -1,0 +1,368 @@
+h1
+{
+    margin: 30px 0px;
+    padding-bottom: 20px;
+    color: rgb(58, 78, 92);
+    font-size: 26px;
+    font-weight: bold;
+    border-bottom: solid 0.5px rgb(143, 143, 143);
+}
+.danhmuc
+{
+    margin-bottom: 200px;
+}
+.danhmuc li 
+{
+    margin: 1px 0px;
+}
+.danhmuc li a
+{
+    color: rgb(136, 24, 24);
+    text-decoration: none;
+}
+.danhmuc li :hover
+{
+    text-decoration: underline;
+}
+table 
+{
+border-collapse: collapse;
+text-align: center;
+}
+table, th, td 
+{
+border: 2px solid rgb(202, 198, 198);
+}
+.giohang .gia,.giohang .soluong,.giohang .tamtinh
+{
+    width: 15%;
+}
+.giohang .ten
+{
+    width: 40%;
+}
+.giohang .img, .del
+{
+    width: 9%;
+}
+.giohang img
+{
+    width: 55px;
+}
+.giohang .button
+{
+    background-color: rgb(46, 152, 223);
+    color: white;
+    border: 2px solid rgb(46, 152, 223);
+}
+.giohang .number
+{
+    width: 40%;
+}
+.giohang th
+{
+    font-size: 16px;
+    height: 40px;
+}
+.giohang td
+{
+    font-size: 15px;
+    height: 40px;
+}
+.giohang a
+{
+    color: brown;
+    text-decoration: none;
+}
+.giohang a:hover
+{
+    text-decoration: underline;
+}
+.tongcong
+{
+    margin-top: 25px;
+    text-align: right;
+}
+.btn-thanhtoan
+{
+    background-color: rgb(46, 152, 223);
+    color: white;
+    border: 2px solid rgb(46, 152, 223);
+    margin-top: 13px;
+    margin-left: 77%;
+    font-weight: bolder;
+    font-size: 15px;
+    padding: 5px 32px;
+}
+h3
+{
+    margin: 10px 0px;
+    color: rgb(58, 78, 92);
+    font-size: 23px;
+    font-weight: bold;
+    
+}
+.thongtintaikhoan
+{
+    font-size: 15px;
+}
+.thongtintaikhoan div
+{
+    margin-top: 3px;
+}
+.thongtintaikhoan a
+{
+    margin-left: 5px;
+    font-size: 13px;
+}
+.xacnhandonhang
+{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+.xacnhandonhang td, .xacnhandonhang th
+{
+    padding: 10px;
+}
+.xacnhandonhang .tong
+{
+    color:rgb(46, 152, 223);
+    font-weight: bold;
+}
+.xacnhanthongtinkhachhang
+{
+    font-size: 15px;
+}
+
+.xacnhanthongtinkhachhang div
+{
+    margin-top: 3px;
+}
+#luuy
+{
+    font-size: 13px;
+    margin: 20px 0px;
+    text-align: center;
+}
+.btn-dathang
+{
+    background-color: rgb(46, 152, 223);
+    color: white;
+    border: 2px solid rgb(46, 152, 223);
+    margin-top: 13px;
+    font-weight: bolder;
+    font-size: 14px;
+    margin-left: 25%;
+    padding: 5px 25px;
+}
+.dathoanthanh
+{
+    padding: 10px;
+    font-size: 15px;
+    border: 2px rgb(71, 154, 209) solid;
+    background-color: rgb(217, 236, 248);
+    width: 83%;
+} 
+.dathoanthanh p
+{
+    margin-top: 3px;
+}
+.thaydoithongtin
+{
+    font-size: 14px;
+}
+.thaydoithongtin div
+{
+    margin-top: 5px;
+}
+.thaydoithongtin .form
+{
+    height: 30px;
+    width: 70%;
+}
+.thaydoithongtin .btn-sua
+{
+    background-color: rgb(46, 152, 223);
+    color: white;
+    border: 2px solid rgb(46, 152, 223);
+    margin-top: 2px;
+    font-weight: bolder;
+    font-size: 14px;
+    margin-left: 0%;
+    padding: 5px 25px;
+}
+.thaydoithongtin #ketqua
+{
+    color: red;
+}
+.datkhachsan h3
+{
+    text-align: center;
+
+}
+.datkhachsan div
+{
+    margin: 3px 0px;
+    
+}
+.datkhachsan input, .datkhachsan select
+{
+    width: 100%;
+    height: 30px;
+}
+.datkhachsan .btn-datphong
+{
+    background-color: rgb(46, 152, 223);
+    color: white;
+    border: 2px solid rgb(46, 152, 223);
+    margin-top: 10px;
+    font-weight: bolder;
+    font-size: 14px;
+    margin-left: 22%;
+    width: 170px;
+    padding: 5px 10px;
+} 
+.datkhachsan #result
+{
+    color: red;
+    text-align: center;
+    font-size: 14px;
+}
+.lichsudattour
+{
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+.lichsudattour th
+{
+    font-size: 15px;
+}
+.lichsudattour td, .lichsudattour th
+{
+    padding: 10px;
+}
+.lichsudatkhachsan
+{
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+.lichsudatkhachsan th
+{
+    font-size: 15px;
+}
+.lichsudatkhachsan td, .lichsudatkhachsan th
+{
+    padding: 10px;
+}  
+.quanlytour a .btn-themsanpham
+{
+    background-color: rgb(46, 152, 223);
+    color: white;
+    border: 1px solid rgb(46, 152, 223);
+    margin-bottom: 10px;
+    font-weight: bolder;
+    font-size: 14px;
+    width: 170px;
+    padding: 5px 10px;
+}
+.quanlytour .search-tour input
+{
+    height: 33px;
+    font-size: 14px;
+}
+.quanlytour .tour
+{
+    margin: 10px 0px ;
+    width: 100%;
+}
+.quanlytour .tour .tentour
+{
+    text-decoration: none;
+    color: black;
+}
+.quanlytour .tour .tentour:hover
+{
+    text-decoration: underline;
+    color:rgb(221, 95, 37);
+}
+.quanlytour .tour td, .quanlytour .tour th
+{
+    padding: 10px 0px;
+}
+.phantrang
+{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.phantrang a
+{
+    background-color: rgb(232, 233, 233);
+    padding: 7px 14px;
+    text-decoration: none;
+    color: rgb(145, 145, 145);
+    font-size: 14px;
+    border: 1px solid rgb(146, 146, 146);
+}
+.phantrang a:hover
+{
+    background-color: rgb(193, 231, 247);
+}
+.themcapnhattour input
+{
+    width: 85%;
+    height: 33px;
+}
+.themcapnhattour label
+{
+    font-weight: bold;
+}
+.themcapnhattour .form
+{
+    margin-top: 10px;
+    font-size: 14px;
+}
+.themcapnhattour .checkbox
+{
+    font-size: 14px;
+    margin-top: 20px;
+}
+.themcapnhattour .checkbox input
+{
+    width: 15px;
+    margin-right: 10px;
+    font-size: 10px;
+    padding: 0px;
+}
+.themcapnhattour .select
+{
+    margin-top: 12px;
+    font-size: 14px;
+
+}
+.themcapnhattour .select select
+{
+    height: 30px;
+    width: 200px;
+    
+}
+.themcapnhattour .btn-themtour
+{
+    background-color: rgb(46, 152, 223);
+    color: white;
+    border: 1px solid rgb(46, 152, 223);
+    margin-bottom: 10px;
+    margin-left: 40%;
+    margin-top: 10px;
+    font-weight: bolder;
+    font-size: 14px;
+    width: 130px;
+    padding: 5px 10px;
+}
+.themcapnhattour #ketqua
+{
+    color: red;
+    margin-left: 39%;
+    font-size: 13px;
+}

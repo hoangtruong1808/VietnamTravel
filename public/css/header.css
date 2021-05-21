@@ -1,0 +1,89 @@
+/* _____top-bar________ */
+.top-bar{
+    padding: 10px;
+    background-color: rgb(46, 152, 223);
+}
+.top-bar__social-list{
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0;
+    margin: 0;
+}
+.top-bar__social-list li{
+    margin-left: 30px;
+}
+.top-bar__social-list li a
+{
+    color: white;
+}
+
+.top-bar__user a
+{
+    color: white;
+    text-decoration: none;
+}
+.top-bar__user span
+{
+    color: white;
+}
+/* _____top-menu________ */
+.top-menu__logo a img{
+    width: 170px;
+    height: 100px;
+
+}
+.top-menu__menu{
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0;
+    margin: 0;
+    margin-top: 37px;
+}
+.top-menu__menu .top-menu__menu--list{
+    
+    text-decoration: none;
+    position: relative;
+}
+.top-menu__menu .top-menu__menu--list a{
+    text-decoration: none;
+    color: rgb(89, 95, 102);
+    font-weight: BOLd;
+    font-size: 16px;    
+    padding:12px 25px;
+}
+.top-menu__menu .sub-menu
+{
+    list-style: none;
+}
+.top-menu__menu .top-menu__menu--list > .sub-menu
+{
+    display: none;
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 10px;
+}
+.sub-menu li
+{
+    width: 200px;
+    padding: 10px 0px;
+    background-color: white;    
+}
+
+.top-menu__menu li:hover .sub-menu
+{
+    display: block;
+}
+.top-menu__menu .top-menu__menu--list a:hover, .sub-menu li:hover
+{
+    background: rgb(92, 186, 248);
+    color: white;
+}
+/*___banner___*/
+.banner img
+{
+    width: 100%;
+    margin-bottom: 10px;
+}

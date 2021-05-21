@@ -1,0 +1,197 @@
+/**content**/
+h3
+{
+    font-weight: bolder;
+    color: rgb(93, 180, 144);
+}
+.about
+{
+    margin-top: 20px;
+}
+.tinmoinhat__anh
+{
+    height: 300px;
+    width: 525px;
+    margin-bottom: 20px;
+}
+.content h5 a
+{
+    text-decoration: none;
+    color: black;
+}
+.content h5 a:hover
+{
+    color: blue;
+}
+.tinmoinhat 
+{
+    font-size: 14px;
+}
+.news
+{
+    padding: 0 10px;
+    border-right: solid 1px rgb(151, 150, 150);
+}
+.tieude a
+{
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+}
+.tieude a:hover
+{
+    color: orangered;
+}
+.content
+{
+    margin: 20px 0px;
+    padding: 10px 0px;
+    border-top: solid 1px rgb(151, 150, 150);
+    font-size: 14px;
+}
+.content .anh 
+{
+    height: 170px;
+    width: 267px;
+}
+.phantrang
+{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.phantrang a
+{
+    background-color: rgb(232, 233, 233);
+    padding: 7px 14px;
+    text-decoration: none;
+    color: rgb(145, 145, 145);
+    font-size: 14px;
+    border: 1px solid rgb(146, 146, 146);
+}
+.phantrang a:hover
+{
+    background-color: rgb(193, 231, 247);
+}
+
+/**content-chitietloai**/
+.content-chitietloai
+{
+    margin: 13px 0px;
+    padding: 15px 0px;
+    border-top: solid 1px rgb(151, 150, 150);
+    font-size: 14px;
+}
+.content-chitietloai .anh 
+{
+    height: 143px;
+    width: 235px;
+}
+.chitietloai__anh
+{
+    width: 475px;
+    height: 285px;
+}
+.content-chitietloai .tomtat
+{
+    padding-right: 40px;
+    padding-top: 10px;
+}
+.tinmoinhat-chitietloai .tomtat
+{
+    font-size: 14px;
+    margin-top: 10px;
+} 
+.tinmoinhat-chitietloai .menu-loaibaiviet
+{
+    margin-bottom: 20px;
+}
+.tinmoinhat-chitietloai .menu-loaibaiviet span
+{
+    padding-right: 20px;
+}
+.tinmoinhat-chitietloai .menu-loaibaiviet a
+{
+    color: rgb(80, 78, 78);
+    font-weight: bold;
+    text-decoration: none;
+}
+#tinmoinhat
+{
+    border-top: solid 1px rgb(151, 150, 150);
+    padding-top: 15px;
+}
+/**baiviet**/
+
+.baiviet .baiviet__tieude
+{
+    font-size: 25px;
+    font-weight: bolder; 
+    margin-top: 10px;
+
+}
+.baiviet .baiviet__thongtin 
+{
+    font-size: 13px;
+    margin-top: 8px;
+    margin-bottom: 18px;
+}
+.baiviet .baiviet__thongtin span
+{
+    padding: 0px 10px;
+
+}
+.baiviet .baiviet__noidung
+{
+    padding-top: 18px;
+    border-top: 2px solid rgb(156, 153, 153);
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.baiviet .baiviet__noidung .baiviet-tomtat
+{
+    font-weight: bolder;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+.baiviet .baiviet__noidung p
+{
+    padding: 0px 0px;
+    margin: 15px 0px;
+}
+.baiviet .baiviet__noidung img
+{
+    width: 650px;
+    height: 400px;
+    margin-left: auto;
+	margin-right: auto;
+	display: block;
+    margin-bottom: 10px;
+}
+.baiviet__lienquan 
+{
+    padding-top: 20px;
+    border-top: 2px solid rgb(156, 153, 153);
+    
+}
+
+.baiviet h3
+{
+    font-size: 18px;
+    color: rgb(88, 88, 88);
+}
+.baiviet__lienquan ul
+{
+    padding: 0px;
+}
+.baiviet__lienquan ul li a
+{
+    text-decoration: none;
+    font-size: 14px;
+    color: rgb(83, 82, 82);
+}
+.baiviet__lienquan ul li a:hover
+{
+    color: orangered;
+}
