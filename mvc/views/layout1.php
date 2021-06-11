@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./public/css/right-col.css">
     <link rel="stylesheet" href="./public/css/content.css">    
     <link rel="stylesheet" href="./public/css/tour.css"> 
+    <link rel="stylesheet" href="./public/css/comment.css">
     <title>Vẻ đẹp Việt Nam</title>
 </head>
 <body>

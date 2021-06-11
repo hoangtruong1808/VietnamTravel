@@ -31,12 +31,14 @@ class khachsan extends controller
 
     }
 
-    public function chitietkhachsan ($makhachsan)
+    public function chitietkhachsan ($makhachsan, $id)
     {
-        
+        $theloai = "Khách sạn";
         $a=$this->model("khachsanmodel");
+        $b=$this->model("commentmodel"); 
         $this->view("layout2",["detail"=>"chitietkhachsanview",
                     "chitietkhachsan"=>$a->LayChiTietKhachSan($makhachsan),
+                    "comment"=>$b->LayComment($theloai, $id),
                     ]);
     }
 }

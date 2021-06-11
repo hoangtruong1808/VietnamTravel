@@ -19,19 +19,20 @@
                 WHERE ID = '$id'";              
             return $this->conn->exec($qr);
         }
-        public function LayChiTietDiaDiem($id)
+        public function LayChiTietDiaDiem($madiadiem)
         { 
             $qr =" SELECT * FROM diadiem
-            WHERE id='$id'";
+            WHERE madiadiem='$madiadiem'";
             $diadiem=$this->conn->query($qr);
             return $diadiem->fetch();
         }
-        public function ThemDiaDiem($ten, $madiadiem, $diachi, $thanhpho, $urlmap, $urlhinh, $gia , $chuyenmuc, $loaidiadiem, $chitiet)
+        public function ThemDiaDiem($ten, $madiadiem, $diachi, $thanhpho, $urlmap, $urlhinh, $gia , $chuyenmuc, $loaidiadiem, $tiennghi, $chitiet)
         {
             $qr="INSERT INTO diadiem
-                VALUES(null, '$ten', '$madiadiem' ,'$diachi', '$thanhpho', '$urlmap', '$urlhinh', '$gia','$chuyenmuc','$loaidiadiem','$chitiet');
+                VALUES(null, '$ten', '$madiadiem' ,'$diachi', '$thanhpho', '$urlmap', '$urlhinh', '$gia','$chuyenmuc','$loaidiadiem', '$tiennghi', '$chitiet', 0);
                 ";
-            return $this->conn->exec($qr);
+            $this->conn->exec($qr);
+            return $this->conn->lastInsertId();
         }
         public function CapNhatDiaDiem($id, $ten, $madiadiem, $diachi, $thanhpho, $urlmap, $urlhinh, $gia , $chuyenmuc, $loaidiadiem, $tiennghi, $chitiet)
         {
@@ -42,4 +43,49 @@
                 ";
             return $this->conn->exec($qr);
         }
+        public function LayDiaDiemMoi($a)
+        { 
+            $qr =" SELECT * FROM diadiem
+            ORDER BY ID DESC
+            LIMIT $a , 3 ";
+            return $this->conn->query($qr);
+        }
+        public function LayDiaDiemMoiTheo($loai, $value, $a)
+        { 
+            $qr =" SELECT * FROM diadiem
+            WHERE $loai = '$value'
+            ORDER BY ID DESC
+            LIMIT $a , 3 ";
+            return $this->conn->query($qr);
+        }
+        public function LocDiaDiem($qry, $a)
+        {
+            $qr = "SELECT * FROM diadiem
+            WHERE tmp=0 $qry
+            LIMIT $a , 3";
+            return $this->conn->query($qr);
+        }
+        public function LayDuLieu($col)
+        {
+            $qr = "SELECT DISTINCT $col FROM diadiem";
+            return $this->conn->query($qr);
+        }
+        public function XoaAnhCu($iddiadiem)
+        {
+            $qr ="DELETE FROM diadiemimage
+                WHERE ID_diadiem = $iddiadiem";
+            return $this->conn->exec($qr);
+        }
+        public function ThemAnhMoTa($iddiadiem, $image)
+        {
+            $qr ="INSERT INTO diadiemimage
+                VALUES (null, $iddiadiem, '$image');";
+            return $this->conn->exec($qr);
+        }
+        public function LayAnhMoTa($id)
+        { 
+            $qr =" SELECT * FROM diadiemimage
+                WHERE ID_diadiem = $id";
+            return $this->conn->query($qr);
+        } 
     }

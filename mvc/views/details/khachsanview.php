@@ -26,7 +26,7 @@
                     {?>
                     <div class="col-sm-3">
                         <div class="khachsan">
-                            <a href="./khachsan/chitietkhachsan/<?php echo $khachsan["makhachsan"]?>">  
+                            <a href="./khachsan/chitietkhachsan/<?php echo $khachsan["makhachsan"]?>/<?php echo $khachsan["ID"]?>">  
                             <img src="public/image/<?php echo $khachsan["urlhinh"]?>">
                             <div class="tenkhachsan"><?php echo $khachsan["ten"]?></div>
                             <div class="thanhpho"><i class="fas fa-map-marker-alt"></i><?php echo " ".$khachsan["thanhpho"]?></div>
@@ -52,7 +52,7 @@
                     {?>
                     <div class="col-sm-3">
                         <div class="khachsan">
-                            <a href="./khachsan/chitietkhachsan/<?php echo $khachsan["makhachsan"]?>">  
+                            <a href="./khachsan/chitietkhachsan/<?php echo $khachsan["makhachsan"]?>/<?php echo $khachsan["ID"]?>">  
                             <img src="public/image/<?php echo $khachsan["urlhinh"]?>">
                             <div class="tenkhachsan"><?php echo $khachsan["ten"]?></div>
                             <div class="thanhpho"><i class="fas fa-map-marker-alt"></i><?php echo " ".$khachsan["thanhpho"]?></div>
@@ -78,7 +78,7 @@
                     {?>
                     <div class="col-sm-3">
                         <div class="khachsan">
-                            <a href="./khachsan/chitietkhachsan/<?php echo $khachsan["makhachsan"]?>">  
+                            <a href="./khachsan/chitietkhachsan/<?php echo $khachsan["makhachsan"]?>/<?php echo $khachsan["makhachsan"]?>">  
                             <img src="public/image/<?php echo $khachsan["urlhinh"]?>">
                             <div class="tenkhachsan"><?php echo $khachsan["ten"]?></div>
                             <div class="thanhpho"><i class="fas fa-map-marker-alt"></i><?php echo " ".$khachsan["thanhpho"]?></div>

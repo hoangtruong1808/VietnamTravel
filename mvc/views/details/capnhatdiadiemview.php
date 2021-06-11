@@ -25,8 +25,16 @@
                     <div><input type="form" name="urlmap" value='<?php echo($data["diadiem"]["urlmap"])?>'></input></div>
                 </div>
                 <div class="form">
-                    <label>Ảnh</label>
-                    <div><input type="file" name="diadiem-img"><input type="hidden" name="diadiem-img" value=<?php echo($data["diadiem"]["urlhinh"])?>></input></div>
+                    <label>Ảnh đại diện</label>
+                    <div>
+                        <input type="file" name="diadiem-img">
+                        <input type="hidden" name="diadiem-img" value=<?php echo($data["diadiem"]["urlhinh"])?>></input>
+                    </div>
+                </div><div class="form">
+                    <label>Các ảnh mô tả</label>
+                    <div>
+                        <input type="file" name="diadiem-imgs[]" multiple="multiple">
+                    </div>
                 </div>
             </div>
 
@@ -55,7 +63,7 @@
                             <option value="Khách sạn">Khách sạn</option>
                             <option value="Chợ">Chợ</option>
                             <option value="Siêu thị">Siêu thị</option>
-                            <option value="Danh lam thắng cảnh">Danh lam thắng cảnh</option>
+                            <option value="Điểm tham quan">Điểm tham quan</option>
                             <option value="Đền, chùa">Đền, chùa</option>
                         </select>
                     </div>
@@ -65,6 +73,7 @@
                     <div>
                         <select name="gia" >
                         <option value='<?php echo $data["diadiem"]["gia"] ?>' selected="selected"><?php echo $data["diadiem"]["gia"] ?></option>
+                            <option value="Giá miễn phí">Giá miễn phí</option>
                             <option value="Giá rẻ">Giá rẻ</option>
                             <option value="Giá bình thường">Giá bình thường</option>
                             <option value="Giá cao">Giá cao</option>

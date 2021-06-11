@@ -46,6 +46,31 @@
                     </div>
                 </div>
         </div>
+        <div class="commentarea">
+            <form class="comment_form" name="comment" action="./trangchu/comment" method="POST">
+                <input type="hidden" name="theloai" value="Khách sạn"></input>
+                <input type="hidden" name="idbaiviet" value="<?php echo $data["chitietkhachsan"]['ID']?>"></input>
+                <input type="hidden" name="link" value="./khachsan/chitietkhachsan/<?php echo $data["chitietkhachsan"]['makhachsan'] ?>/<?php echo $data["chitietkhachsan"]['ID']?>"></input>
+                <div>
+                    <label>Comment</label>
+                </div>
+                <div>
+                    <textarea name="comment-text" class="comment_form--text"></textarea>
+                </div>
+                <div>
+                    <input id="btn-comment" type="submit" value="Bình luận">
+                </div>
+            </form>
+            <div class="comments">
+                <?php foreach ($data["comment"] as $comment)
+                {?>
+                <div class="comment">
+                    <div class="comment_user"><b><?php echo $comment['hotenuser']?></b> <div class="date"><?php echo $comment['date']?></div></div>
+                    <div class="comment_text"><?php echo $comment['text']?></div>
+                </div>
+                <?php }?>
+            </div>
+        </div>
     </div>
 </body>
 </html>

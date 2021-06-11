@@ -2,7 +2,7 @@
     <h3>Quản lý địa điểm </h3>
     <div class="row justify-content-between">
         <div class="col-auto">
-            <a href="./taikhoan/themtour"><button class="btn-themsanpham">Thêm địa điểm mới</button></a>
+            <a href="./taikhoan/themdiadiem"><button class="btn-themsanpham">Thêm địa điểm mới</button></a>
         </div>
         <div class="col-auto">
             <form class="search" action="./taikhoan/search" method="POST">
@@ -27,10 +27,10 @@
     ?>
         <tr>
             <td><?php echo $diadiem["ID"]?></td>
-            <td><a href="./diadiem/chitietdiadiem/<?php echo $diadiem["tendiadiem"]?>" class="tentour"><?php echo $diadiem["ten"]?></a></td>
+            <td><a href="./diadiem/chitietdiadiem/<?php echo $diadiem["madiadiem"]?>/<?php echo $diadiem["ID"]?>" class="tentour"><?php echo $diadiem["ten"]?></a></td>
             <td><?php echo $diadiem["diachi"]?></td>
             <td><?php echo $diadiem["chuyenmuc"]?></td>
-            <td><a href="./taikhoan/capnhatdiadiem/<?php echo $diadiem["ID"]?>">Sửa</a></td>
+            <td><a href="./taikhoan/capnhatdiadiem/<?php echo $diadiem["madiadiem"]?>">Sửa</a></td>
             <td><a href="./taikhoan/xoadiadiem/<?php echo $diadiem["ID"]?>">Xóa</a></td>
         </tr>
     <?php

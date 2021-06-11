@@ -12,6 +12,6 @@
         function __construct()
         {
             $this->conn = new PDO($this->dsn, $this->username, $this->password);
-        }
+        }   
     }
 ?>

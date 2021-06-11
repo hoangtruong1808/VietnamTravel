@@ -13,15 +13,15 @@
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="khampha__menu">
-                                <a href="">
+                                <a href="./diadiem/boloc/loaidiadiem/Quán cafe">
                                     <h2>Đồ ăn & Nước uống</h2>
-                                    <img src="./public/image/doannuocuong.jpg">
+                                    <img src="./public/image/doannuocuon.jpg">
                                 </a>
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="khampha__menu">
-                                <a href="">
+                                <a href="./diadiem/boloc/chuyenmuc/Địa điểm đẹp">
                                     <h2>Địa điểm đẹp</h2>
                                     <img src="./public/image/diadiemdep.jpg">
                                 </a>
@@ -29,17 +29,17 @@
                         </div>
                         <div class="col-sm-3">                            
                             <div class="khampha__menu">
-                                <a href="">
+                                <a href="./diadiem/boloc/chuyenmuc/Mua sắm">
                                     <h2>Mua sắm</h2>
-                                    <img src="./public/image/doannuocuong.jpg">
+                                    <img src="./public/image/muasam.jpg">
                                 </a>
                             </div>
                         </div>
                         <div class="col-sm-3">                            
                             <div class="khampha__menu">
-                                <a href="">
-                                    <h2>Lễ hội</h2>
-                                    <img src="./public/image/doannuocuong.jpg">
+                                <a href="./diadiem/boloc/chuyenmuc/Nhà nghỉ">
+                                    <h2>Nhà nghỉ</h2>
+                                    <img src="./public/image/hotel.jpg">
                                 </a>
                             </div>
                         </div>

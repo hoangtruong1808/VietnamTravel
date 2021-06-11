@@ -24,8 +24,12 @@
                     <div><input type="form" name="urlmap"></input></div>
                 </div>
                 <div class="form">
-                    <label>Ảnh</label>
+                    <label>Ảnh đại diện</label>
                     <div><input type="file" name="diadiem-img"></input></div>
+                </div>
+                <div class="form">
+                    <label>Các ảnh mô tả</label>
+                    <div><input type="file" name="diadiem-imgs[]" multiple="multiple"></input></div>
                 </div>
             </div>
 
@@ -52,8 +56,8 @@
                             <option value="Khách sạn">Khách sạn</option>
                             <option value="Chợ">Chợ</option>
                             <option value="Siêu thị">Siêu thị</option>
-                            <option value="Danh lam thắng cảnh">Danh lam thắng cảnh</option>
-                            <option value="Đền, chùa">Đền, c hùa</option>
+                            <option value="Điểm tham quan">Điểm tham quan</option>
+                            <option value="Đền, chùa">Đền, chùa</option>
                         </select>
                     </div>
                 </div>
@@ -61,6 +65,7 @@
                     <label>Giá</label>
                     <div>
                         <select name="gia">
+                            <option value="Giá miễn phí">Giá miễn phí</option>
                             <option value="Giá rẻ">Giá rẻ</option>
                             <option value="Giá bình thường">Giá bình thường</option>
                             <option value="Giá cao">Giá cao</option>

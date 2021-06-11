@@ -523,13 +523,20 @@ class taikhoan extends controller
             $urlmap = $_POST["urlmap"];
             $tmp = $_FILES["diadiem-img"]["tmp_name"];
             $urlhinh = $_FILES["diadiem-img"]["name"];
+            $conn = new PDO('mysql:host=localhost;dbname=sql_vedepvietnam; charset=utf8', 'root', '');
+            
+            move_uploaded_file($tmp, "public/image/".$urlhinh);
             $gia = $_POST["gia"];
             $chitiet = $_POST["chitiet"];
             $chuyenmuc = $_POST["chuyenmuc"];
             $loaidiadiem = $_POST["loaidiadiem"];
-            echo $tiennghi = implode(' - ', $_POST["tiennghi"]);
-            move_uploaded_file($tmp, "public/image/".$urlhinh);
-            $a->ThemDiaDiem($ten, $madiadiem, $diachi, $thanhpho, $urlmap, $urlhinh, $gia, $chuyenmuc, $loaidiadiem, $tiennghi, $chitiet);
+            $tiennghi = implode(' - ', $_POST["tiennghi"]);
+            $last_id = $a->ThemDiaDiem($ten, $madiadiem, $diachi, $thanhpho, $urlmap, $urlhinh, $gia, $chuyenmuc, $loaidiadiem, $tiennghi, $chitiet);
+            foreach ($_FILES["diadiem-imgs"]["name"] as $key=>$value)
+            {
+                move_uploaded_file($_FILES["diadiem-imgs"]["tmp_name"][$key], "public/image/".$value);
+                $a->ThemAnhMoTa($last_id, $value);
+            }
             header("location: ./quanlydiadiem/1");
         };
     }
@@ -540,12 +547,12 @@ class taikhoan extends controller
         header("location: ../quanlydiadiem/1");
     }
     public function capnhatdiadiem($id)
-    {
-        $a=$this->model("diadiemmodel");
-        $this->view("layoutuser", ["detail"=>"capnhatdiadiemview",
-                                "diadiem"=>$a->LayChiTietDiaDiem($id),
-                                "result"=>"",
-        ]);
+        {
+            $a=$this->model("diadiemmodel");
+            $this->view("layoutuser", ["detail"=>"capnhatdiadiemview",
+                                    "diadiem"=>$a->LayChiTietDiaDiem($id),
+                                    "result"=>"",
+            ]);
     }
     public function processcapnhatdiadiem($id)
     {
@@ -578,8 +585,18 @@ class taikhoan extends controller
                     $tmp = $_FILES["diadiem-img"]["tmp_name"];
                     move_uploaded_file($tmp, "public/image/".$urlhinh);
                 }
-            $a->CapNhatDiaDiem($id, $ten, $madiadiem, $diachi, $thanhpho, $urlmap, $urlhinh, $gia, $chuyenmuc, $loaidiadiem, $chitiet);
-            header("location: ../quanlydiadiem/1");
+                if (!empty($_FILES["diadiem-imgs"]["name"][0]))
+                {
+                    $a->XoaAnhCu($id);
+                    foreach ($_FILES["diadiem-imgs"]["name"] as $key=>$value)
+                    {
+                        move_uploaded_file($_FILES["diadiem-imgs"]["tmp_name"][$key], "public/image/".$value);
+                        $a->ThemAnhMoTa($id, $value);
+                    }    
+                }
+                $tiennghi = implode(' - ', $_POST["tiennghi"]);
+                $a->CapNhatDiaDiem($id, $ten, $madiadiem, $diachi, $thanhpho, $urlmap, $urlhinh, $gia, $chuyenmuc, $loaidiadiem, $tiennghi, $chitiet);
+                header("location: ../quanlydiadiem/1");
             };
     }
     //search

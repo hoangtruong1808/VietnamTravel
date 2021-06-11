@@ -27,6 +27,14 @@
             $baiviet=$this->conn->query($qr); 
             return $baiviet->fetch();
         }
+        public function LayTenUser()
+        {
+            $iduser=$_SESSION["id"];
+            $qr ="SELECT hoten FROM user
+            WHERE ID=$iduser";
+            $baiviet=$this->conn->query($qr); 
+            return $baiviet->fetch();
+        }
         public function LayDanhMucThongTinUser()
         {
             $qr ="SELECT * FROM thongtinuser";

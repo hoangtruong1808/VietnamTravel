@@ -27,7 +27,7 @@ class baiviet extends controller
         $this->view("layout1", ["detail"=>"blogview",
                 "baiviet"=>$a->LayBaiViet($tieudekhongdau),
                 "baivietcungtheloai"=>$a->LayBaiVietCungTheLoai($a->LayBaiViet($tieudekhongdau)["idTheLoai"]),
-                "bonkhachsanmoi"=>$this->hotel->LayBonKhachSan(),   
+                "bonkhachsanmoi"=>$this->hotel->LayBonKhachSan(),  
                 ]);
                 
                     
