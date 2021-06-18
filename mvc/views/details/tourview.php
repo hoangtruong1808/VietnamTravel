@@ -1,19 +1,38 @@
                 <div class="row">
-                    <forrm class="search">
+                    <form class="search"  method="POST" action="./dattour/search">
                         <span>
-                            <select name="chondiadiem" class="searchbox">
-                                <option>Tìm Địa điểm</option>
-                                <option>Gia Lai</option>
-                                <option>Thành phố Hồ Chí Minh</option>
-                                <option>Hà Nội</option>
+                            <select name="chondiemxuatphat" class="searchbox">
+                                <option>Điểm xuất phát</option>
+                                <?php 
+                                    foreach ($data["diemxuatphat"] as $diemxuatphat)
+                                    {
+                                ?>
+                                <option value="<?php echo $diemxuatphat[0]?>"><?php echo $diemxuatphat[0]?></option>
+                                <?php
+                                    }
+                                ?>
+                            </select>
+                        </span>
+                        <span>
+                            <select name="chondiemden" class="searchbox">
+                                <option>Điểm đến</option>
+                                <?php 
+                                    foreach ($data["diemden"] as $diemden)
+                                    {
+                                ?>
+                                <option value="<?php echo $diemden[0]?>"><?php echo $diemden[0]?></option>
+                                <?php
+                                    }
+                                ?>
                             </select>
                         </span>
                         <span>
                             <select name="chongia" class="searchbox">
-                                <option>Tìm Giá</option>
-                                <option>100.000-200.000</option>
-                                <option>100.000-200.000</option>
-                                <option>100.000-200.000</option>
+                                <option value="0-1000000000000">Tìm Giá</option>
+                                <option value="3000000-5000000">3.000.000 - 5.000.000</option>
+                                <option value="5000000-7000000">5.000.000 - 7.000.000</option>
+                                <option value="7000000-10000000">7.000.000 - 10.000.000</option>
+                                <option value="10000000-12000000">10.000.000 - 12.000.000</option>
                             </select>
                         </span>
                     <span><input type="submit" value="TÌM KIẾM NGAY" id="button" class="searchbox">

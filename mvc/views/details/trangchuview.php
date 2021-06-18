@@ -46,36 +46,18 @@
                     </div>
                 </div>
                 <div class="diadiemnoibat">
-                    <h1>Địa điểm nổi bật</h1>
+                    <h1>Địa điểm mới nhất</h1>
                     <div class="row">
+                        <?php foreach($data["diadiem"] as $diadiem)
+                        {?>
                         <div class="col-sm-3">
                             <div class="diadiemnoibat__menu">
-                                <a href=""><img src="./public/image/cungthethaotienson.jpeg"></a>
-                                <div class="thanhpho"><a href=""> Đà Nẵng </a></div>
-                                <div class="diadiem"><a href=""> Cung Thể thao Tiên Sơn </a></div>
+                                <a href="./diadiem/chitietdiadiem/<?php echo $diadiem['madiadiem'] ?>/<?php echo $diadiem['ID'] ?>"><img src="./public/image/<?php echo $diadiem['urlhinh']?>"></a>
+                                <div class="thanhpho"><a href="./diadiem/boloc/thanhpho/<?php echo $diadiem['thanhpho'] ?> ?>/<?php echo $diadiem['ID'] ?>"> <?php echo $diadiem['thanhpho']?> </a></div>
+                                <div class="diadiem"><a href="./diadiem/chitietdiadiem/<?php echo $diadiem['madiadiem'] ?>/<?php echo $diadiem['ID'] ?>"> <?php echo $diadiem['ten']?> </a></div>
                             </div>
                         </div>
-                        <div class="col-sm-3">
-                            <div class="diadiemnoibat__menu">
-                                <a href=""><img src="./public/image/cungthethaotienson.jpeg"></a>
-                                <div class="thanhpho"><a href=""> Đà Nẵng </a></div>
-                                <div class="diadiem"><a href=""> Cung Thể thao Tiên Sơn </a></div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="diadiemnoibat__menu">
-                                <a href=""><img src="./public/image/cungthethaotienson.jpeg"></a>
-                                <div class="thanhpho"><a href=""> Đà Nẵng </a></div>
-                                <div class="diadiem"><a href=""> Cung Thể thao Tiên Sơn </a></div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="diadiemnoibat__menu">
-                                <a href=""><img src="./public/image/cungthethaotienson.jpeg"></a>
-                                <div class="thanhpho"><a href=""> Đà Nẵng </a></div>
-                                <div class="diadiem"><a href=""> Cung Thể thao Tiên Sơn </a></div>
-                            </div>
-                        </div>
+                        <?php } ?>
                     </div>
                 </div>  
                 <div class="thanhphonoibat">
@@ -83,45 +65,57 @@
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="thanhphonoibat__menu">
-                                <a href="">
-                                    <div class="thanhpho"> Gia lai - 20 places</div>
+                                <a href="./diadiem/boloc/thanhpho/TP.Hồ Chí Minh">
+                                    <div class="thanhpho"> TP.HCM - <?php echo $data["tphcm"][0]?> places</div>
+                                    <img src="./public/image/tphcm.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="thanhphonoibat__menu">
+                                <a href="./diadiem/boloc/thanhpho/Hà Nội">
+                                    <div class="thanhpho"> Hà Nội - <?php echo $data["hanoi"][0]?> places</div>
+                                    <img src="./public/image/tphanoi.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="thanhphonoibat__menu">
+                                <a href="./diadiem/boloc/thanhpho/Đà Nẵng">
+                                    <div class="thanhpho"> Đà Nẵng - <?php echo $data["danang"][0]?> places</div>
                                     <img src="./public/image/langson.jpg">
                                 </a>
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="thanhphonoibat__menu">
-                                <a href="">
-                                    <div class="thanhpho"> Gia lai - 20 places</div>
-                                    <img src="./public/image/langson.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="thanhphonoibat__menu">
-                                <a href="">
-                                    <div class="thanhpho"> Gia lai - 20 places</div>
-                                    <img src="./public/image/langson.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="thanhphonoibat__menu">
-                                <a href="">
-                                    <div class="thanhpho"> Gia lai - 20 places</div>
-                                    <img src="./public/image/langson.jpg">
+                                <a href="./diadiem/boloc/thanhpho/Pleiku">
+                                    <div class="thanhpho"> Pleiku - <?php echo $data["pleiku"][0]?> places</div>
+                                    <img src="./public/image/pleiku.gif">
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="baivietdocnhieunhat">
+                <div class="trangchu-baivietdocnhieunhat">
                     <h1>Bài viết đọc nhiều nhất</h1>
                     <div class="row">
-                        <div class="col-sm-3"></div>
-                        <div class="col-sm-3"></div>
-                        <div class="col-sm-3"></div>
-                        <div class="col-sm-3"></div>
+                        <?php foreach ($data["baiviet"] as $baiviet)
+                        {
+                        ?>
+                        <div class="col-sm-3">
+                            <div class="baiviet">
+                                <div class="tieude">
+                                    <a href="./baiviet/blog/<?php echo $baiviet["tieudekhongdau"]?>"><?php echo $baiviet["tieude"]?></a>
+                                </div>
+                                <div class="tomtat">
+                                    <?php echo $baiviet["tomtat"]?>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                        }
+                        ?>
                     </div>
                 </div>
     

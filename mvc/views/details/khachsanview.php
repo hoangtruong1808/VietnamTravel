@@ -1,20 +1,24 @@
-
                 <div class="row">
-                    <forrm class="search">
+                    <form class="search" action="./khachsan/search" method="POST">
                         <span>
                             <select name="chondiadiem" class="searchbox">
-                                <option>Tìm Địa điểm</option>
-                                <option>Gia Lai</option>
-                                <option>Thành phố Hồ Chí Minh</option>
-                                <option>Hà Nội</option>
+                                <option>Tìm thành phố</option>                           
+                                <?php
+                                    foreach ($data["thanhpho"] as $thanhpho)
+                                    {
+                                ?>
+                                    <option value="<?php echo $thanhpho[0]?>"><?php echo $thanhpho[0]?></option>
+                                <?php
+                                    }
+                                ?>
                             </select>
                         </span>
                         <span>
                             <select name="chongia" class="searchbox">
-                                <option>Tìm Giá</option>
-                                <option>100.000-200.000</option>
-                                <option>100.000-200.000</option>
-                                <option>100.000-200.000</option>
+                                <option value="0-10000000000">Tìm Giá Phòng Đơn</option>
+                                <option value="100000-500000">100.000 - 500.000</option>
+                                <option value="500000-1000000">500.000 - 1.000.000</option>
+                                <option value="1000000-2000000">1.000.000 - 2.000.000</option>
                             </select>
                         </span>
                     <span><input type="submit" value="TÌM KIẾM NGAY" id="button" class="searchbox">

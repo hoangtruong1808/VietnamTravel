@@ -9,6 +9,7 @@ class disan extends controller
     public function vn()
     {   
         $a=$this->model("disanmodel");
+        $b=$this->model("baivietmodel");
         $baivietbatdau = 0;
         $this->view("layout1", ["detail"=>"theloaiview",
                 "baivietmoinhat"=>$a->LayBaivietmoinhat(),
@@ -18,11 +19,13 @@ class disan extends controller
                 "tentheloaiviettat"=>"disan",
                 "tentheloai"=>"Di Sản",
                 "bonkhachsanmoi"=>$this->hotel->LayBonKhachSan(),
+                "baivietdocnhieunhat" => $b->LayBaiVietDocNhieuNhat(),
                 ]);
     }
     public function page($page)
     {   
         $a=$this->model("disanmodel");
+        $b=$this->model("baivietmodel");
         if (isset($page))
         {
             $baivietbatdau = ($page-1)*5;
@@ -37,11 +40,13 @@ class disan extends controller
                 "tentheloaiviettat"=>"disan",
                  "tentheloai"=>"Di Sản",
                  "bonkhachsanmoi"=>$this->hotel->LayBonKhachSan(),
+                 "baivietdocnhieunhat" => $b->LayBaiVietDocNhieuNhat(),
                 ]);
     }
     public function disantulieu()
     {
         $a=$this->model("disanmodel");
+        $b=$this->model("baivietmodel");
         $this->view("layout1", [
                 "detail"=>"loaibaivietview",
                 "baiviet"=>$a->LayDiSanTuLieu(),
@@ -49,12 +54,14 @@ class disan extends controller
                 "tentheloaiviettat"=>"disan",
                 "loaibaiviet"=>$a->Layloaibaiviet(),
                 "bonkhachsanmoi"=>$this->hotel->LayBonKhachSan(),
+                "baivietdocnhieunhat" => $b->LayBaiVietDocNhieuNhat(),
                 ]);
     }
 
     public function disanvatthe()
     {
         $a=$this->model("disanmodel");
+        $b=$this->model("baivietmodel");
         $this->view("layout1", [
                 "detail"=>"loaibaivietview",
                 "baiviet"=>$a->LayDiSanVatThe(),
@@ -62,12 +69,14 @@ class disan extends controller
                 "tentheloaiviettat"=>"disan",
                 "loaibaiviet"=>$a->Layloaibaiviet(),
                 "bonkhachsanmoi"=>$this->hotel->LayBonKhachSan(),
+                "baivietdocnhieunhat" => $b->LayBaiVietDocNhieuNhat(),
                 ]);
     }
     
     public function disanphivatthe()
     {
         $a=$this->model("disanmodel");
+        $b=$this->model("baivietmodel");
         $this->view("layout1", [
                 "detail"=>"loaibaivietview",
                 "baiviet"=>$a->LayDiSanPhiVatThe(),
@@ -75,6 +84,7 @@ class disan extends controller
                 "tentheloaiviettat"=>"disan",
                 "loaibaiviet"=>$a->Layloaibaiviet(),
                 "bonkhachsanmoi"=>$this->hotel->LayBonKhachSan(),
+                "baivietdocnhieunhat" => $b->LayBaiVietDocNhieuNhat(),
                 ]);
     }
 }

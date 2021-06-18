@@ -2,7 +2,7 @@
     <h3>Quản lý khách sạn </h3>
     <div class="row justify-content-between">
         <div class="col-auto">
-            <a href="./taikhoan/themtour"><button class="btn-themsanpham">Thêm khách sạn mới</button></a>
+            <a href="./taikhoan/themkhachsan"><button class="btn-themsanpham">Thêm khách sạn mới</button></a>
         </div>
         <div class="col-auto">
             <form class="search" action="./taikhoan/search" method="POST">

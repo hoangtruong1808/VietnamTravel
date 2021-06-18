@@ -14,6 +14,8 @@ class dattour extends controller
                     "tour2"=>$a->LayTourMoi(4),
                     "tour3"=>$a->LayTourMoi(8),
                     "tour4"=>$a->LayTourMoi(12),
+                    "diemxuatphat"=>$a->LayDuLieu("diemxuatphat"),
+                    "diemden"=>$a->LayDuLieu("diemden"),
                     ]);
 
     }
@@ -32,6 +34,8 @@ class dattour extends controller
                     "tour2"=>$a->LayTourMoi($tourbatdau2),
                     "tour3"=>$a->LayTourMoi($tourbatdau3),
                     "tour4"=>$a->LayTourMoi($tourbatdau4),
+                    "diemxuatphat"=>$a->LayDuLieu("diemxuatphat"),
+                    "diemden"=>$a->LayDuLieu("diemden"),
                     ]);
 
     }
@@ -40,10 +44,12 @@ class dattour extends controller
     {
         
         $a=$this->model("tourmodel");
+        $b=$this->model("baivietmodel");
         $this->view("layout1",["detail"=>"chitiettourview",
                     "chitiettour"=>$a->LayChiTietTour($matour),
                     "batourlienquan"=>$a->LayBaTourLienQuan($a->LayChiTietTour($matour)["diemxuatphat"], $a->LayChiTietTour($matour)["diemden"]),
                     "bonkhachsanmoi"=>$this->hotel->LayBonKhachSan(),
+                    "baivietdocnhieunhat" => $b->LayBaiVietDocNhieuNhat(),
                     ]);
     }
 
@@ -56,6 +62,25 @@ class dattour extends controller
         else $_SESSION["tour"][$idtour]=1;
         header("location: ../../taikhoan/donhang");
     }
-
+    public function search()
+    {
+        $a=$this->model("tourmodel");
+        $diemxuatphat = $_POST["chondiemxuatphat"];
+        $diemden = $_POST["chondiemden"];
+        if (isset($_POST["chongia"]))
+        {
+            $gia = explode("-",$_POST["chongia"]);
+            $giamin = $gia[0];
+            $giamax = $gia[1];
+        }
+        $this->view("layout2", ["detail"=>"tourview",
+                    "tour1"=>$a->TimKiemTour($diemxuatphat, $diemden, $giamin, $giamax,0),
+                    "tour2"=>$a->TimKiemTour($diemxuatphat, $diemden, $giamin, $giamax,4),
+                    "tour3"=>$a->TimKiemTour($diemxuatphat, $diemden, $giamin, $giamax,8),
+                    "tour4"=>$a->TimKiemTour($diemxuatphat, $diemden, $giamin, $giamax,12),
+                    "diemxuatphat"=>$a->LayDuLieu("diemxuatphat"),
+                    "diemden"=>$a->LayDuLieu("diemden"),
+                    ]);
+    }
 }
 ?>

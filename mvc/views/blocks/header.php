@@ -66,8 +66,8 @@
                     <div class="col-auto">  
                         <ul class="top-menu__menu">
                                 <li class="top-menu__menu--list">
-                                    <a href="./trangchu">
-                                        TRANG CHỦ
+                                    <a href="./diadiem">
+                                        ĐỊA ĐIỂM
                                     </a>
                                 </li>
                                 <li class="top-menu__menu--list">

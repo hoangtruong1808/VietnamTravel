@@ -88,5 +88,17 @@
                 ";
             return $this->conn->exec($qr);
         }
+        public function LayDuLieu($a)
+        {
+            $qr = "SELECT DISTINCT $a FROM tour";
+            return $this->conn->query($qr);
+        }
+        public function TimKiemTour($diemxuatphat, $diemden, $giamin, $giamax, $a)
+        {
+            $qr = "SELECT * FROM tour
+            WHERE diemxuatphat='$diemxuatphat' AND diemden='$diemden' AND gia>$giamin AND gia<$giamax
+            LIMIT $a , 4 ;";
+            return $this->conn->query($qr);
+        }
     }
 ?>

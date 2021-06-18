@@ -43,7 +43,7 @@ h1
     color: white;
     margin-top: 62px;
     font-weight: bold;
-    text-shadow: black 0.2em 0.2em 0.2em;
+    text-shadow: 2px 2px 2px 2px black;
 }
 
 .khampha 
@@ -94,7 +94,7 @@ h1
     text-decoration: none;
     color: rgb(112, 112, 112);
     font-weight: bold;
-    font-size: 17px;
+    font-size: 16px;
     
 }
 .diadiemnoibat .diadiemnoibat__menu .thanhpho a:hover
@@ -110,7 +110,7 @@ h1
     text-decoration: none;
     color: rgb(39, 38, 38);
     font-weight: bold;
-    font-size: 19px;
+    font-size: 16px;
     
 }
 
@@ -133,6 +133,7 @@ h1
     margin: 300px 20px 0px 20px;
     font-size: 21px;
     font-weight: bold;
+    text-shadow: 3px 3px 3px 3px black;
 }
 .thanhphonoibat .thanhphonoibat__menu .thanhpho:hover
 {
@@ -144,7 +145,31 @@ h1
     height: 360px;
     border-radius: 20px;
 }
-.baivietdocnhieunhat
+.trangchu-baivietdocnhieunhat
 {
-    margin-top: 80px;
+    margin: 80px 0px;
+}
+.trangchu-baivietdocnhieunhat .baiviet
+{
+    margin: 0px 10px;
+    padding: 20px 20px;
+    background-color: rgb(236, 232, 232);
+}
+.trangchu-baivietdocnhieunhat .baiviet .tieude a
+{
+    color: rgb(8, 8, 8);
+    font-weight: normal;
+    font-size: 20px;
+    text-decoration: none;
+}
+.trangchu-baivietdocnhieunhat .baiviet .tieude a:hover
+{
+    color: rgb(80, 111, 145);
+}
+.trangchu-baivietdocnhieunhat .baiviet .tomtat
+{
+    margin-top: 10px;
+    color:rgb(39, 38, 38);
+    font-size: 15px;
+
 }

@@ -1,6 +1,6 @@
                         <div class="timkiem"> 
                             <div><p>TÌM KIẾM</p></div>
-                            <form name="timkiem" method="get" action="#">
+                            <form name="timkiem" method="POST" action="./baiviet/timkiem">
                                 
                                 <input id="form" type="form" placeholder="Nhập từ khóa.." name="tukhoa">
                                 <input id="submit" type="submit" value="TÌM KIẾM">
@@ -15,10 +15,14 @@
                         </div>  
                         <div class="docnhieunhat"> 
                             <div class="docnhieunhat__tieude">ĐỌC NHIỀU NHẤT</div>
-                            <div> <a href="">Khám phá Huế – Đi đâu, ăn gì, ở đâu tại Huế  </a></div>
-                            <div> <a href="">Khám phá Huế – Đi đâu, ăn gì, ở đâu tại Huế  </a></div>
-                            <div> <a href="">Khám phá Huế – Đi đâu, ăn gì, ở đâu tại Huế  </a></div>
-                            <div> <a href="">Khám phá Huế – Đi đâu, ăn gì, ở đâu tại Huế  </a></div>
+                            <?php
+                                foreach ($data["baivietdocnhieunhat"] as $baiviet)
+                                {
+                            ?>
+                                <div> <a href=""><?php echo $baiviet["tieude"] ?> </a></div>
+                            <?php
+                                }
+                            ?>
                             
                         </div>
                         <div class="khachsan1">

@@ -3,6 +3,10 @@ class taikhoan extends controller
 {
     public function __construct()
     {
+        if(!isset($_SESSION["id"]))
+        {
+            header("location:./dangnhap");
+        }
         if (isset($_SESSION["tour"]))
         {
             if (count($_SESSION["tour"])==0)
@@ -14,23 +18,10 @@ class taikhoan extends controller
     }
     public function vn() 
     {    
-        if (isset($_SESSION["tour"]))
-        {
-            $arr=array();
-            foreach ($_SESSION["tour"] as $id=>$soluong)
-            {
-                $arr[] = $id;
-            }
-            if (isset($arr))
-            {
-            $strid = implode(",", $arr);
-            }
-        }
-        
-        else $strid = 0;
-        $a=$this->model("tourmodel");
-        $this->view("layoutuser", ["detail"=>"donhangview",
-                    "TourDat"=>$a->DatTour($strid)
+        $a=$this->model("usermodel"); 
+        $this->view("layoutuser", ["detail"=>"thongtintaikhoanview",
+                    "danhmucthongtin"=>$a->LayDanhMucThongTinUser(),
+                    "thongtinuser"=>$a->LayThongTinUser($_SESSION["id"]),
                     ]);
     }
     //ĐƠN HÀNG
@@ -279,8 +270,102 @@ class taikhoan extends controller
         header("location: ../lichsudat");
     }
     //admin
+    public function quanlybaiviet($page)
+    {
+        if(!($_SESSION["id"]==0))
+        {
+            header("location:../../trangchu");
+        }
+        $a=$this->model("baivietmodel");
+        foreach($a->SoBaiViet() as $baiviet)
+        {
+            $sobaiviet=$baiviet[0];
+        }
+        $sopage = ceil($sobaiviet/6);
+        $this->view("layoutuser", ["detail"=>"quanlybaivietview",
+                                    "baiviet"=>$a->LaySauBaiVietMoi($page-1+5*($page-1)),          
+                                    "sobaiviet"=>$sobaiviet,  
+                                    "sopage"=>$sopage,
+                                    ]);
+    }
+    public function thembaiviet()
+    {
+        if(!($_SESSION["id"]==0))
+        {
+            header("location:../../trangchu");
+        }
+        $this->view("layoutuser", ["detail"=>"thembaivietview",
+                                "result"=>"",
+        ]);
+    }
+    public function processthembaiviet()
+    {
+        if(!($_SESSION["id"]==0))
+        {
+            header("location:../../trangchu");
+        }
+        $a=$this->model("baivietmodel");
+        
+            $tieude = $_POST["tieude"];
+            $tieudekhongdau = $_POST["tieudekhongdau"];
+            $theloai= $_POST["theloai"];
+            $loaibaiviet = $_POST["loaibaiviet"];
+            $urlhinh = $_FILES["baiviet-img"]["name"];
+            $tmp = $_FILES["baiviet-img"]["tmp_name"];
+            $tomtat = $_POST["tomtat"];
+            $content = $_POST["content"];
+            move_uploaded_file($tmp, "public/image/".$urlhinh);
+            $a->ThemBaiViet($tieude, $tieudekhongdau, $tomtat, $urlhinh, $theloai, $loaibaiviet, $content);
+            header("location: ./quanlybaiviet/1");
+        
+    }
+    public function capnhatbaiviet($id)
+    {
+        if(!($_SESSION["id"]==0))
+        {
+            header("location:../../trangchu");
+        }
+        $a=$this->model("baivietmodel");
+        $this->view("layoutuser", ["detail"=>"capnhatbaivietview",
+                                "baiviet"=>$a->LayChiTietBaiViet($id),
+                                "result"=>"",
+        ]);
+    }
+    public function processcapnhatbaiviet($id)
+    {
+        if(!($_SESSION["id"]==0))
+        {
+            header("location:../../trangchu");
+        }
+        $a=$this->model("baivietmodel");
+        $tieude = $_POST["tieude"];
+        $tieudekhongdau = $_POST["tieudekhongdau"];
+        $theloai= $_POST["theloai"];
+        $loaibaiviet = $_POST["loaibaiviet"];
+        if (empty($_FILES["baiviet-img"]["name"]))
+        {
+            $urlhinh = $_POST["baiviet-img"];
+        }
+        else
+        {
+            $urlhinh = $_FILES["baiviet-img"]["name"];
+            $tmp = $_FILES["baiviet-img"]["tmp_name"];
+            move_uploaded_file($tmp, "public/image/".$urlhinh);
+        }
+        $tomtat = $_POST["tomtat"];
+        $content = $_POST["content"];
+        $a->CapNhatBaiViet($id, $tieude, $tieudekhongdau, $tomtat, $urlhinh, $theloai, $loaibaiviet, $content);
+        header("location: ../quanlybaiviet/1");
+    }
+    
+    //quanlytour
+    //--------quanlytour----------//
     public function quanlytour($page)
     {
+        if(!($_SESSION["id"]==0))
+        {
+            header("location:../../trangchu");
+        }
         $a=$this->model("tourmodel");
         foreach($a->SoTour() as $tour)
         {
@@ -293,16 +378,23 @@ class taikhoan extends controller
                                     "sopage"=>$sopage,
                                     ]);
     }
-    //quanlytour
-    //--------quanlytour----------//
+    
     public function themtour()
     {
+        if(!($_SESSION["id"]==0))
+        {
+            header("location:../../trangchu");
+        }
         $this->view("layoutuser", ["detail"=>"themtourview",
                                 "result"=>"",
         ]);
     }
     public function processthemtour()
     {
+        if(!($_SESSION["id"]==0))
+        {
+            header("location:../../trangchu");
+        }
         $a=$this->model("tourmodel");
         if (empty($_POST["ten"]) || empty($_POST["ma"]) || empty($_POST["gia"]) || empty($_POST["giatruockm"]) || empty($_FILES["tour-img"]["name"])
         || empty($_POST["ngaykhoihanh"]) || empty($_POST["thoigian"]) || empty($_POST["diemxuatphat"]) || empty($_POST["diemden"]) || empty($_POST["chitiet"]))
@@ -331,6 +423,10 @@ class taikhoan extends controller
     }
     public function capnhattour($id)
     {
+        if(!($_SESSION["id"]==0))
+        {
+            header("location:../../trangchu");
+        }
         $a=$this->model("tourmodel");
         $this->view("layoutuser", ["detail"=>"capnhattourview",
                                 "tour"=>$a->LayChiTietTourID($id),
@@ -339,6 +435,10 @@ class taikhoan extends controller
     }
     public function processcapnhattour($id)
     {
+        if(!($_SESSION["id"]==0))
+        {
+            header("location:../../trangchu");
+        }
         $a=$this->model("tourmodel");
         if (empty($_POST["ten"]) || empty($_POST["ma"]) || empty($_POST["gia"]) || empty($_POST["giatruockm"]) 
         || empty($_POST["ngaykhoihanh"]) || empty($_POST["thoigian"]) || empty($_POST["diemxuatphat"]) 
@@ -384,6 +484,10 @@ class taikhoan extends controller
 
     public function quanlykhachsan($page)
     {
+        if(!($_SESSION["id"]==0))
+        {
+            header("location:../../trangchu");
+        }
         $a=$this->model("khachsanmodel");
         foreach($a->SoKhachSan() as $khachsan)
         {
@@ -397,12 +501,20 @@ class taikhoan extends controller
     }
     public function themkhachsan()
     {
+        if(!($_SESSION["id"]==0))
+        {
+            header("location:../../trangchu");
+        }
         $this->view("layoutuser", ["detail"=>"themkhachsanview",
                                 "result"=>"",
         ]);
     }
     public function processthemkhachsan()
     {
+        if(!($_SESSION["id"]==0))
+        {
+            header("location:../../trangchu");
+        }
         $a=$this->model("khachsanmodel");
         if (empty($_POST["ten"]) || empty($_POST["ma"]) || empty($_POST["diachi"]) || empty($_POST["thanhpho"]) || empty($_FILES["khachsan-img"]["name"])
         || empty($_POST["gia"]) || empty($_POST["giaphongdoi"]) || empty($_POST["giaphonggiadinh"]) || empty($_POST["chatluong"]) || empty($_POST["tiennghi"]) || empty($_POST["chitiet"]))
@@ -432,12 +544,20 @@ class taikhoan extends controller
     }
     public function xoakhachsan($id)
     {
+        if(!($_SESSION["id"]==0))
+        {
+            header("location:../../trangchu");
+        }
         $a=$this->model("khachsanmodel");
         $a->XoaKhachSan($id);
         header("location: ../quanlykhachsan/1");
     }
     public function capnhatkhachsan($id)
     {
+        if(!($_SESSION["id"]==0))
+        {
+            header("location:../../trangchu");
+        }
         $a=$this->model("khachsanmodel");
         $this->view("layoutuser", ["detail"=>"capnhatkhachsanview",
                                 "khachsan"=>$a->LayChiTietKhachSanID($id),
@@ -446,6 +566,10 @@ class taikhoan extends controller
     }
     public function processcapnhatkhachsan($id)
     {
+        if(!($_SESSION["id"]==0))
+        {
+            header("location:../../trangchu");
+        }
         $a=$this->model("khachsanmodel");
         if (empty($_POST["ten"]) || empty($_POST["ma"]) || empty($_POST["diachi"]) || empty($_POST["thanhpho"]) 
         || empty($_POST["gia"]) || empty($_POST["giaphongdoi"]) || empty($_POST["giaphonggiadinh"]) || empty($_POST["chatluong"]) 
@@ -486,6 +610,10 @@ class taikhoan extends controller
 
     public function quanlydiadiem($page)
     {
+        if(!($_SESSION["id"]==0))
+        {
+            header("location:../../trangchu");
+        }
         $a=$this->model("diadiemmodel");
         foreach($a->SoDiaDiem() as $diadiem)
         {
@@ -499,6 +627,10 @@ class taikhoan extends controller
     }
     public function themdiadiem()
     {
+        if(!($_SESSION["id"]==0))
+        {
+            header("location:../../trangchu");
+        }
         $this->view("layoutuser", ["detail"=>"themdiadiemview",
                                 "result"=>"",
         ]);
@@ -506,6 +638,10 @@ class taikhoan extends controller
     
     public function processthemdiadiem()
     {
+        if(!($_SESSION["id"]==0))
+        {
+            header("location:../../trangchu");
+        }
         $a=$this->model("diadiemmodel");
         if (empty($_POST["ten"]) || empty($_POST["diachi"]) || empty($_POST["thanhpho"]) || empty($_POST["gia"])  || empty($_POST["madiadiem"]) || empty($_POST["urlmap"]) 
         || empty($_POST["tiennghi"]) || empty($_POST["loaidiadiem"]) || empty($_POST["chuyenmuc"]) || empty($_POST["chitiet"]) || empty($_FILES["diadiem-img"]["name"]))
@@ -542,12 +678,20 @@ class taikhoan extends controller
     }
     public function xoadiadiem($id)
     {
+        if(!($_SESSION["id"]==0))
+        {
+            header("location:../../trangchu");
+        }
         $a=$this->model("diadiemmodel");
         $a->XoaDiaDiem($id);
         header("location: ../quanlydiadiem/1");
     }
     public function capnhatdiadiem($id)
+    {
+        if(!($_SESSION["id"]==0))
         {
+            header("location:../../trangchu");
+        }
             $a=$this->model("diadiemmodel");
             $this->view("layoutuser", ["detail"=>"capnhatdiadiemview",
                                     "diadiem"=>$a->LayChiTietDiaDiem($id),
@@ -556,6 +700,10 @@ class taikhoan extends controller
     }
     public function processcapnhatdiadiem($id)
     {
+        if(!($_SESSION["id"]==0))
+        {
+            header("location:../../trangchu");
+        }
         $a=$this->model("diadiemmodel");
         if (empty($_POST["ten"]) || empty($_POST["diachi"]) || empty($_POST["thanhpho"]) || empty($_POST["madiadiem"]) || empty($_POST["urlmap"]) || empty($_POST["chitiet"]))
         {
@@ -601,12 +749,22 @@ class taikhoan extends controller
     }
     //search
     public function search()
-    {
+    {   
         $a=$this->model("tourmodel");
         $keysearch=$_POST["keysearch"];
         $table=$_POST["table"];
         $this->view("layoutuser", ["detail"=>"quanly".$table."view",
                                     "$table"=>$a->Search($keysearch, $table),          
+                                    "sopage"=>1,
+                                    ]);
+
+    }
+    public function searchbaiviet()
+    {   
+        $a=$this->model("baivietmodel");
+        $keysearch=$_POST["keysearch"];
+        $this->view("layoutuser", ["detail"=>"quanlybaivietview",
+                                    "baiviet"=>$a->LayBaiVietTimKiem($keysearch),          
                                     "sopage"=>1,
                                     ]);
 

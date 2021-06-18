@@ -13,7 +13,7 @@
                             <div class="footer-tieude">Truy cập nhanh</div>
                             <ul>
                                 <li><i class="fas fa-angle-right"></i><a href="./trangchu"> Trang chủ</a></li>
-                                <li><i class="fas fa-angle-right"></i><a href="./vanhoavanguoiviet">  Văn hóa và người Việt</a></li>
+                                <li><i class="fas fa-angle-right"></i><a href="./diadiem">Địa điểm</a></li>
                                 <li><i class="fas fa-angle-right"></i><a href="./khampha">  Khám phá</a></li>
                                 <li><i class="fas fa-angle-right"></i><a href="./disan">  Di sản</a></li>
                                 <li><i class="fas fa-angle-right"></i><a href="./dattour">  Đặt tour</a></li>

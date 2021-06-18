@@ -34,10 +34,14 @@
                             <li> <a href="./taikhoan/donhang"> Đơn hàng </a> </li>
                             <li> <a href="./taikhoan/thongtintaikhoan"> Tài khoản </a> </li>
                             <li> <a href="./taikhoan/lichsudat"> Lịch sử đặt </a></li>
-                            <li> <a href="./taikhoan/quanlybaiviet"> Quản lý bài viết </a> </li>
+                            <?php if($_SESSION["id"]==0)
+                            {?>
+                            <li> <a href="./taikhoan/quanlybaiviet/1"> Quản lý bài viết </a> </li>
                             <li> <a href="./taikhoan/quanlytour/1"> Quản lý tour </a> </li>
                             <li> <a href="./taikhoan/quanlykhachsan/1"> Quản lý khách sạn </a> </li>
                             <li> <a href="./taikhoan/quanlydiadiem/1"> Quản lý địa điểm </a> </li>
+                            <?php
+                            }?>
                             <li> <a href="./dangnhap/dangxuat"> Đăng xuất</a> </li>
                         </ul>
                     </div>

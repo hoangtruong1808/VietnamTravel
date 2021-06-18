@@ -66,6 +66,8 @@
         <?php echo $data["diadiem"]["urlmap"] ?>
     </div>
     <div class="commentarea">
+        <?php if(isset($_SESSION["id"]))
+        { ?>
         <form class="comment_form" name="comment" action="./trangchu/comment" method="POST">
             <input type="hidden" name="theloai" value="Địa điểm"></input>
             <input type="hidden" name="idbaiviet" value="<?php echo $data['diadiem']['ID']?>"></input>
@@ -80,6 +82,7 @@
                 <input id="btn-comment" type="submit" value="Bình luận">
             </div>
         </form>
+        <?php }?>
         <div class="comments">
             <?php foreach ($data["comment"] as $comment)
             {?>

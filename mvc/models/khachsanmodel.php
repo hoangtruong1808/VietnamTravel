@@ -73,5 +73,17 @@
                 WHERE ID = '$id'";              
             return $this->conn->exec($qr);
         }
+        public function LayDuLieuThanhPho()
+        {
+            $qr = "SELECT DISTINCT thanhpho FROM khachsan";
+            return $this->conn->query($qr);
+        }
+        public function TimKiemKhachSan($diadiem, $giamin, $giamax, $a)
+        {
+            $qr = "SELECT * FROM khachsan
+            WHERE thanhpho='$diadiem' AND gia>$giamin AND gia<$giamax
+            LIMIT $a , 4 ;";
+            return $this->conn->query($qr);
+        }
     }
 ?>

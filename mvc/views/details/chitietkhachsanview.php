@@ -41,12 +41,18 @@
                             <?php echo $data["chitietkhachsan"]["gioithieu"]?>
                         </div>
                         <div>
+                            <?php if(isset($_SESSION["id"]))
+                            { ?>
                             <a href="./taikhoan/datkhachsan/<?php echo $data["chitietkhachsan"]["makhachsan"]?>"><button class="btn-datkhachsan">Đặt ngay</button></a>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
         </div>
+        
         <div class="commentarea">
+            <?php if(isset($_SESSION["id"]))
+            { ?>
             <form class="comment_form" name="comment" action="./trangchu/comment" method="POST">
                 <input type="hidden" name="theloai" value="Khách sạn"></input>
                 <input type="hidden" name="idbaiviet" value="<?php echo $data["chitietkhachsan"]['ID']?>"></input>
@@ -61,6 +67,7 @@
                     <input id="btn-comment" type="submit" value="Bình luận">
                 </div>
             </form>
+            <?php } ?>
             <div class="comments">
                 <?php foreach ($data["comment"] as $comment)
                 {?>
@@ -71,6 +78,7 @@
                 <?php }?>
             </div>
         </div>
+        
     </div>
 </body>
 </html>

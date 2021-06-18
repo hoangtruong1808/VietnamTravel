@@ -50,6 +50,19 @@
             LIMIT $a , 3 ";
             return $this->conn->query($qr);
         }
+        public function LayBonDiaDiemMoi()
+        { 
+            $qr =" SELECT * FROM diadiem
+            ORDER BY ID DESC
+            LIMIT 0 , 4 ";
+            return $this->conn->query($qr);
+        }
+        public function LaySoDiaDiemCuaThanhPho($thanhpho)
+        { 
+            $qr =" SELECT count(ID) FROM diadiem
+            WHERE thanhpho = '$thanhpho'";
+            return $this->conn->query($qr)->fetch();
+        }
         public function LayDiaDiemMoiTheo($loai, $value, $a)
         { 
             $qr =" SELECT * FROM diadiem

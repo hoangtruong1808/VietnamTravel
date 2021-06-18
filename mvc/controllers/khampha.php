@@ -9,6 +9,7 @@ class khampha extends controller
     public function vn()
     {   
         $a=$this->model("khamphamodel");
+        $b=$this->model("baivietmodel");
         $baivietbatdau = 0;
         
         $this->view("layout1", ["detail"=>"theloaiview",
@@ -19,11 +20,13 @@ class khampha extends controller
                 "tentheloaiviettat"=>"khampha",
                  "tentheloai"=>"Khám phá",
                  "bonkhachsanmoi"=>$this->hotel->LayBonKhachSan(),
+                 "baivietdocnhieunhat" => $b->LayBaiVietDocNhieuNhat(),
                 ]);
     }
     public function page($page)
     {   
         $a=$this->model("khamphamodel");
+        $b=$this->model("baivietmodel");
         if (isset($page))
         {
             $baivietbatdau = ($page-1)*5;
@@ -38,6 +41,7 @@ class khampha extends controller
                 "tentheloaiviettat"=>"khampha",
                  "tentheloai"=>"Khám phá",
                  "bonkhachsanmoi"=>$this->hotel->LayBonKhachSan(),
+                 "baivietdocnhieunhat" => $b->LayBaiVietDocNhieuNhat(),
                 ]);
     }
 
@@ -45,6 +49,7 @@ class khampha extends controller
     public function diemden()
     {
         $a=$this->model("khamphamodel");
+        $b=$this->model("baivietmodel");
         $this->view("layout1", [
                 "detail"=>"loaibaivietview",
                 "baiviet"=>$a->LayDiemDen(),
@@ -52,12 +57,14 @@ class khampha extends controller
                 "tentheloaiviettat"=>"khampha",
                 "loaibaiviet"=>$a->Layloaibaiviet(),
                 "bonkhachsanmoi"=>$this->hotel->LayBonKhachSan(),
+                "baivietdocnhieunhat" => $b->LayBaiVietDocNhieuNhat(),
                 ]);
     }
 
     public function amthuc()
     {
         $a=$this->model("khamphamodel");
+        $b=$this->model("baivietmodel");
         $this->view("layout1", [
                 "detail"=>"loaibaivietview",
                 "baiviet"=>$a->LayAmThuc(),
@@ -65,18 +72,21 @@ class khampha extends controller
                 "tentheloaiviettat"=>"khampha",
                 "loaibaiviet"=>$a->Layloaibaiviet(),
                 "bonkhachsanmoi"=>$this->hotel->LayBonKhachSan(),
+                "baivietdocnhieunhat" => $b->LayBaiVietDocNhieuNhat(),
                 ]);
     }
     
     public function lehoi()
     {
         $a=$this->model("khamphamodel");
+        $b=$this->model("baivietmodel");
         $this->view("layout1", [
                 "detail"=>"loaibaivietview",
                 "baiviet"=>$a->LayLeHoi(),
                 "tentheloai"=>"Khám phá",
                 "tentheloaiviettat"=>"khampha",
                 "loaibaiviet"=>$a->Layloaibaiviet(),"bonkhachsanmoi"=>$this->hotel->LayBonKhachSan(),
+                "baivietdocnhieunhat" => $b->LayBaiVietDocNhieuNhat(),
                 ]);
     }
 }

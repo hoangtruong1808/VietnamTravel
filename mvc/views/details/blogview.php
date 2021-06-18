@@ -4,7 +4,7 @@
                             <div class="baiviet__thongtin">
                                 <span><b>Ngày đăng:</b> 16-03-2021</span>
                                 <span><b>Bởi:</b> Nguyễn Hoàng Trường</span>
-                                <span><b>Lượt xem:</b> 75</span>
+                                <span><b>Lượt xem:</b><?php echo $data["baiviet"]["LuotXem"]?></span>
                                 
                             </div>
                             <div class="baiviet__noidung">
