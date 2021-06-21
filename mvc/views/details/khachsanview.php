@@ -1,5 +1,5 @@
                 <div class="row">
-                    <form class="search" action="./khachsan/search" method="POST">
+                    <form class="searchkhachsan" action="./khachsan/search" method="POST">
                         <span>
                             <select name="chondiadiem" class="searchbox">
                                 <option>Tìm thành phố</option>                           

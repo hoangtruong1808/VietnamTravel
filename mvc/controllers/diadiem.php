@@ -95,6 +95,18 @@ class diadiem extends controller
                     "sopage"=>1,
         ]);
     }
+    public function timkiemdiachi()
+    {
+        $chitietdiachi = $_POST['diachicuthe'];
+        $this->view("layoutfilter", ["detail"=>"diadiemview",
+        "diadiem1"=>$this->a->LayDiaDiemTheoChiTiet($chitietdiachi, 0),
+        "diadiem2"=>$this->a->LayDiaDiemTheoChiTiet($chitietdiachi, 3),
+        "diadiem3"=>$this->a->LayDiaDiemTheoChiTiet($chitietdiachi, 6),
+        "thanhpho"=>$this->thanhpho,
+        "loaidiadiem"=>$this->loaidiadiem,
+        "sopage"=>1,
+]);
+    }
     public function chitietdiadiem($madiadiem, $id)
     {
         $theloai = "Địa điểm";  

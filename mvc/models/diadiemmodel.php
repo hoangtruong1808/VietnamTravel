@@ -83,6 +83,14 @@
             $qr = "SELECT DISTINCT $col FROM diadiem";
             return $this->conn->query($qr);
         }
+        public function LayDiaDiemTheoChiTiet($chitietdiachi, $a)
+        {
+            $qr =" SELECT * FROM diadiem
+            WHERE diachi REGEXP '$chitietdiachi' OR ten REGEXP '$chitietdiachi'  
+            ORDER BY ID DESC
+            LIMIT $a , 3 ";
+            return $this->conn->query($qr);
+        }
         public function XoaAnhCu($iddiadiem)
         {
             $qr ="DELETE FROM diadiemimage

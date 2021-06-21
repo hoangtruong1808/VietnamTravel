@@ -19,17 +19,16 @@ class khachsan extends controller
         $a=$this->model("khachsanmodel");
         if (isset($page))
         {
-            $khachsanbatdau = 0+16*($page-1);
-            $khachsanbatdau2 = 4+16*($page-1);
-            $khachsanbatdau3 = 8+16*($page-1);
-            $khachsanbatdau4 = 12+16*($page-1);
+            $khachsanbatdau = 0+12*($page-1);
+            $khachsanbatdau2 = 4+12*($page-1);
+            $khachsanbatdau3 = 8+12*($page-1);
+            $khachsanbatdau4 = 12+12*($page-1);
         }
         $this->view("layout2", ["detail"=>"khachsanview",
                     "thanhpho"=>$a->LayDuLieuThanhPho(),
                     "khachsan1"=>$a->LayKhachSanMoi($khachsanbatdau),
                     "khachsan2"=>$a->LayKhachSanMoi($khachsanbatdau2),
                     "khachsan3"=>$a->LayKhachSanMoi($khachsanbatdau3),
-                    "khachsan4"=>$a->LayKhachSanMoi($khachsanbatdau4),
                     ]);
 
     }

@@ -7,7 +7,7 @@
 .filter h3
 {
     font-weight: bolder;
-    font-size: 22px;
+    font-size: 20px;
 }
 .filter .btn-search
 {
@@ -24,11 +24,11 @@
 .filter_tq .filter_tieude
 {
     font-weight: bolder;
-    font-size: 18px;
+    font-size: 17px;
 }
 .filter_tq .filter_option
 {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: bold;
     color:rgb(122, 120, 120);
     margin: 10px 0px;
@@ -42,6 +42,26 @@
     margin-top: 20px;
     margin-left: 40px;
 }
+.diadiemview .timkiemchitiet
+{
+    margin-bottom: 20px;
+    margin-left: 60px;
+}
+.diadiemview .form-search
+{
+    height: 35px;
+    width: 60%;
+}
+.diadiemview .form-button
+{
+    background-color: rgb(46, 152, 223);
+    color: white;
+    height: 35px;
+    width: 23%;
+    border: 2px solid rgb(46, 152, 223);
+    font-weight: bolder;
+}
+
 .diadiemview .diadiemview__menu
 {
     width: 293px;
@@ -74,7 +94,7 @@
     text-decoration: none;
     color: rgb(112, 112, 112);
     font-weight: bold;
-    font-size: 17px;
+    font-size: 16px;
     
 }
 .diadiemview .diadiemview__menu .thanhpho a:hover
@@ -90,7 +110,7 @@
     text-decoration: none;
     color: rgb(39, 38, 38);
     font-weight: bold;
-    font-size: 18px;
+    font-size: 17px;
     
 }
 .diadiemview .diadiemview__menu .diachi
@@ -99,7 +119,7 @@
     margin-top: 10px;
     font-weight: bolder;
     color:rgb(143, 142, 142);
-    font-size: 14px;
+    font-size: 13px;
 }
 .diadiemview .diadiemview__menu .diadiem
 {
@@ -135,12 +155,12 @@
 {
     text-align: center;
     font-weight: bold;
-    font-size: 27px;
+    font-size: 24px;
     margin-bottom: 10px;
 }
 .chitietdiadiem_noidung
 {
-    font-size: 16px;
+    font-size: 15px;
     background-color: rgb(215, 236, 240);
     padding: 20px 20px 0px 20px;
     margin-bottom: 20px;
@@ -187,7 +207,7 @@
 .chitietdiadiem_chitiet
 {
     margin: 13px;
-    font-size: 16px;
+    font-size: 15px;
 }
 .chitietdiadiem_chitiet span
 {

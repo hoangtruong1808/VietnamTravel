@@ -1,4 +1,11 @@
+
                 <div class="diadiemview">
+                    <div class="row">
+                        <form action="diadiem/timkiemdiachi" method="POST" class="timkiemchitiet">
+                            <input class="form-search" type="form" name="diachicuthe" placeholder="Nhập tên địa điểm, đường hoặc quận cụ thể">
+                            <input class="form-button" type="submit" value="Tìm">
+                        </form>
+                    </div>
                     <div class="row">
                     <?php foreach($data["diadiem1"] as $diadiem)
                     {?>

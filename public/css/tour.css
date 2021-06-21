@@ -1,14 +1,14 @@
-.search
+.searchtour
 {
     margin-top: 20px;
     padding-bottom: 20px;
     border-bottom: 1px rgb(202, 200, 200) solid;
 }
-.search span
+.searchtour span
 {
     margin: 0px;
 }
-.search .searchbox
+.searchtour .searchbox
 {
     width: 24.5%;
     height: 40px;
@@ -16,7 +16,32 @@
     font-size: 15px;
 }
 
-.search #button
+.searchtour #button
+{
+    background-color: rgb(46, 157, 201);
+    border: 1px rgb(46, 157, 201) solid;
+    color: white;
+    font-weight: bold;
+}
+.searchkhachsan
+{
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px rgb(202, 200, 200) solid;
+}
+.searchkhachsan span
+{
+    margin: 0px;
+}
+.searchkhachsan .searchbox
+{
+    width: 33%;
+    height: 40px;
+    border: 1px black solid;
+    font-size: 15px;
+}
+
+.searchkhachsan #button
 {
     background-color: rgb(46, 157, 201);
     border: 1px rgb(46, 157, 201) solid;

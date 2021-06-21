@@ -4,20 +4,20 @@ body
 }
 .dangki
 {
-	border: solid 2px rgb(15, 142, 165);
-	width:  660px;
+	border: solid 1px rgb(46, 152, 223);
+	width:  550px;
 	margin:30px auto;
 	background-color: white;
 }
 .dangki h1
 {
-	font-size: 25px;
+	font-size: 21px;
 	text-align: center;
 	font-weight: 850;
 	color: white;
 	font-family: Tahoma;
-	background-color:rgb(15, 142, 165);
-	padding: 10px 0px;
+	background-color:rgb(46, 152, 223);
+	padding: 15px 0px;
 	margin: 0px;
 }
 .dangki div
@@ -32,16 +32,16 @@ body
 .dangki .text
 {
 	height: 27px;
-	width: 560px;
+	width: 90%;
 	font-size: 17px;
 }
 .dangki #button
 {
-	margin: 10px 235px 10px;
+	margin: 10px 35% 10px;
 	height: 36px;
 	width: 150px;
-	background-color: #4b8b88;
-	border: solid 2px #4b8b83;
+	background-color: rgb(46, 152, 223);
+	border: solid 2px rgb(46, 152, 223);
 	font-weight: 500;
 	font-family: Tahoma;
 	color: white;
@@ -49,7 +49,7 @@ body
 }
 .dangki p
 {
-	font-size: 18px;
+	font-size: 15px;
 	text-align: center;
 	color: rgb(226, 69, 69);
 	font-weight: 500;

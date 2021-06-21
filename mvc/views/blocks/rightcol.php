@@ -19,7 +19,7 @@
                                 foreach ($data["baivietdocnhieunhat"] as $baiviet)
                                 {
                             ?>
-                                <div> <a href=""><?php echo $baiviet["tieude"] ?> </a></div>
+                                <div> <a href="./baiviet/blog/<?php echo $baiviet["tieudekhongdau"] ?>"><?php echo $baiviet["tieude"] ?> </a></div>
                             <?php
                                 }
                             ?>

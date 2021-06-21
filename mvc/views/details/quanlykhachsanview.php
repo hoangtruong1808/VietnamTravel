@@ -27,7 +27,7 @@
     ?>
         <tr>
             <td><?php echo $khachsan["ID"]?></td>
-            <td><a href="./khachsan/chitietkhachsan/<?php echo $khachsan["makhachsan"]?>" class="tentour"><?php echo $khachsan["ten"]?></a></td>
+            <td><a href="./khachsan/chitietkhachsan/<?php echo $khachsan["makhachsan"]?>/<?php echo $khachsan["ID"]?>" class="tentour"><?php echo $khachsan["ten"]?></a></td>
             <td><?php echo $khachsan["thanhpho"]?></td>
             <td><?php echo number_format($khachsan["gia"],0,",",".")?></td>
             <td><a href="./taikhoan/capnhatkhachsan/<?php echo $khachsan["ID"]?>">Sửa</a></td>

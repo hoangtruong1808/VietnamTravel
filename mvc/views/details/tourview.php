@@ -1,5 +1,5 @@
                 <div class="row">
-                    <form class="search"  method="POST" action="./dattour/search">
+                    <form class="searchtour"  method="POST" action="./dattour/search">
                         <span>
                             <select name="chondiemxuatphat" class="searchbox">
                                 <option>Điểm xuất phát</option>
