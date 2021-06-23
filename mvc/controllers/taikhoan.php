@@ -58,7 +58,7 @@ class taikhoan extends controller
                 else $_SESSION["tour"][$idtour]=$soluong;
             }    
         }
-        header("location: ./vn");
+        header("location: ./donhang");
     }
     public function xoadonhang($idtour)
     {
