@@ -8,6 +8,9 @@
                 </forrm>*/-->
             
                 <!--content-->
+                <div class="thongbaocovid">
+                    Thực hiện "5K: Khẩu trang – Khử khuẩn – Khoảng cách – Không tập trung – Khai báo y tế" để giữ an toàn cho Bạn và Chúng ta trước đại dịch COVID-19
+                </div>
                 <div class="khampha">
                     <h1>Khám phá</h1>
                     <div class="row">

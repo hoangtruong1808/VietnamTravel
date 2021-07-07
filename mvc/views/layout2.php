@@ -23,6 +23,7 @@
     <?php 
     require_once "./mvc/views/blocks/header.php"
     ?>
+    
     <main>
         <section class="about">
             <div class="container"> 
